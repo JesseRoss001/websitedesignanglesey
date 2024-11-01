@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="UTF-8">
+    <title>About Website Design Anglesey – Trusted Web Design Experts in North Wales</title>
+    <meta name="description" content="Learn about Website Design Anglesey's mission to support North Wales businesses with affordable, high-quality web design, graphic design, and SEO solutions.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="about us, Anglesey web design, local web design North Wales, Anglesey website experts">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Website Design Anglesey – Trusted Web Design Experts in North Wales">
+    <meta property="og:description" content="Learn about Website Design Anglesey's mission to support North Wales businesses with affordable, high-quality web design, graphic design, and SEO solutions.">
+    <meta property="og:image" content="https://www.websitedesignanglesey.com/images/about-banner.jpg">
+    <meta property="og:url" content="https://www.websitedesignanglesey.com/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Website Design Anglesey",
+      "url": "https://www.websitedesignanglesey.com",
+      "logo": "https://www.websitedesignanglesey.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/websitedesignanglesey",
+        "https://www.linkedin.com/company/websitedesignanglesey"
+      ],
+      "foundingDate": "1999",
+      "founders": [
+        {
+          "@type": "Person",
+          "name": "Jesse Lee Ross"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4 Ffordd Cerrig Mawr",
+        "addressLocality": "Anglesey",
+        "addressRegion": "North Wales",
+        "postalCode": "LL65 3LU",
+        "addressCountry": "UK"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44-7367-292269",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        /* Gradient Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #ff0000 0%, #ff4d4d 50%, #ff0000 100%);
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        /* Banner Section */
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.websitedesignanglesey.com/images/about-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .hero-section p {
+            font-size: 1.5em;
+        }
+        /* Content Section */
+        .content-section {
+            padding: 60px 0;
+        }
+        .content-section h2 {
+            color: #ff0000;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .content-section p {
+            font-size: 1.1em;
+        }
+        .profile-pic {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        /* Skills Section */
+        .skills-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        .skills-section h2 {
+            margin-bottom: 40px;
+        }
+        .skill-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .skill-item i {
+            font-size: 3em;
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+        .skill-item h5 {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            margin: 50px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #ff0000;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+        .timeline-item.left {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #ff0000;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.left::before {
+            right: -10px;
+        }
+        .timeline-item.right::before {
+            left: -10px;
+        }
+        .timeline-item h5 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        /* Interests Section */
+        .interests-section {
+            padding: 60px 0;
+        }
+        .interest-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .interest-item i {
+            font-size: 3em;
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+        .interest-item h5 {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 40px 0;
+        }
+        .footer a {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="home.html">Website Design Anglesey</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto p-2">
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link active" href="about.html">About</a>
+                </li>
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <h1>About Website Design Anglesey</h1>
+            <p>Your Trusted Web Design Partner in North Wales</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <!-- Introduction -->
+            <h2>Meet Jesse Lee Ross</h2>
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <img src="https://www.websitedesignanglesey.com/images/profile.jpg" alt="Jesse Lee Ross - Full Stack Developer" class="profile-pic">
+                </div>
+                <div class="col-md-8">
+                    <p>As a Full Stack Developer Bootcamp graduate, I combine my background in Chemical Engineering and Mathematics with my passion for web development to create innovative and impactful solutions. I have completed multiple projects using JavaScript, Python, Django, React, CSS, and HTML, demonstrating my proficiency in both front-end and back-end technologies.</p>
+                    <p>I am eager to apply my skills and knowledge in a dynamic and creative environment, where I can contribute to meaningful projects and collaborate with diverse and talented teams. I am adaptable, enthusiastic, and committed to continuous learning and improvement. I am also a certified mathematics teacher, with experience in delivering one-on-one tutoring sessions and customising lesson plans to suit individual needs. Let's connect if you are looking for a versatile and driven Full Stack Developer who can add value to your organisation.</p>
+                    <p><strong>Email:</strong> <a href="mailto:jesseross001@gmail.com">jesseross001@gmail.com</a></p>
+                    <p><strong>Phone:</strong> +44 7367 292269</p>
+                    <p><strong>Online Profiles:</strong> <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Portfolio</a></p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h2>Skills</h2>
+                <div class="row">
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-html5"></i>
+                        <h5>HTML5</h5>
+                    </div>
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-css3"></i>
+                        <h5>CSS3</h5>
+                    </div>
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-js"></i>
+                        <h5>JavaScript</h5>
+                    </div>
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-python"></i>
+                        <h5>Python</h5>
+                    </div>
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-database"></i>
+                        <h5>Django</h5>
+                    </div>
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-react"></i>
+                        <h5>React</h5>
+                    </div>
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-git"></i>
+                        <h5>Git & GitHub</h5>
+                    </div>
+                    <div class="col-md-3 skill-item">
+                        <i class="fa fa-database"></i>
+                        <h5>PostgreSQL</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="timeline-section">
+                <h2>My Journey</h2>
+                <div class="timeline">
+                    <!-- Education -->
+                    <div class="timeline-item left">
+                        <h5>2015-2017</h5>
+                        <p>A-Levels at Ysgol Friars, Bangor, North Wales</p>
+                    </div>
+                    <div class="timeline-item right">
+                        <h5>2018-2022</h5>
+                        <p>Bachelor of Engineering in Chemical Engineering at University of Manchester</p>
+                    </div>
+                    <div class="timeline-item left">
+                        <h5>2022-2023</h5>
+                        <p>PGCE in Mathematics Secondary at Bangor University</p>
+                    </div>
+                    <div class="timeline-item right">
+                        <h5>2023-Present</h5>
+                        <p>Full Stack Developer Bootcamp Graduate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interests Section -->
+            <div class="interests-section">
+                <h2>My Interests</h2>
+                <div class="row">
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-video-camera"></i>
+                        <h5>Cinematography</h5>
+                    </div>
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-gamepad"></i>
+                        <h5>Gaming</h5>
+                    </div>
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-coffee"></i>
+                        <h5>Coffee Art</h5>
+                    </div>
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-calculator"></i>
+                        <h5>Mathematics</h5>
+                    </div>
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-line-chart"></i>
+                        <h5>Investing</h5>
+                    </div>
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-brain"></i>
+                        <h5>Artificial Intelligence</h5>
+                    </div>
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-chess"></i>
+                        <h5>Chess</h5>
+                    </div>
+                    <div class="col-md-3 interest-item">
+                        <i class="fa fa-swimmer"></i>
+                        <h5>Swimming</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="certifications-section">
+                <h2>Certifications</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Code Institute Full Stack Development</li>
+                    <li class="list-group-item">Fire Safety Training Level 2</li>
+                    <li class="list-group-item">First Aid Level 2</li>
+                    <li class="list-group-item">Safeguarding Level 1</li>
+                    <li class="list-group-item">Mental Health First Aid Level 3</li>
+                </ul>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="languages-section">
+                <h2>Languages</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">English (Fluent)</li>
+                    <li class="list-group-item">Afrikaans (Intermediate)</li>
+                    <li class="list-group-item">Xhosa (Beginner)</li>
+                    <li class="list-group-item">Welsh (Beginner)</li>
+                    <li class="list-group-item">German (Beginner)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5" style="background: linear-gradient(90deg, #ff0000 0%, #ff4d4d 100%); color: #ffffff;">
+        <div class="container text-center">
+            <h2>Interested in Working Together?</h2>
+            <p>Contact me today and let's start your next project.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2023 Website Design Anglesey. All Rights Reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
