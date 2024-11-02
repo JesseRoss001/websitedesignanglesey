@@ -1,0 +1,543 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #2E2E30; /* Noir Black */
+    color: #F5F5F5; /* White Smoke */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(46, 46, 48, 0.9); /* Noir Black with transparency */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    color: #C51D34 !important; /* Raspberry Red */
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #F5F5F5 !important; /* White Smoke */
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #C51D34 !important; /* Raspberry Red */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    font-size: 1.5rem;
+    color: #F5F5F5;
+}
+
+.hover-underline {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #C51D34; /* Raspberry Red */
+    transition: width 0.3s;
+}
+
+.nav-link:hover .hover-underline {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('images/hero-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(46, 46, 48, 0.7); /* Semi-transparent Noir Black */
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.hero-section .btn {
+    background-color: #C51D34; /* Raspberry Red */
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    color: #F5F5F5; /* White Smoke */
+    transition: background-color 0.3s;
+}
+
+.hero-section .btn:hover {
+    background-color: #9E172A; /* Darker Raspberry Red */
+}
+
+.hero-section .btn {
+    border-radius: 0;
+}
+
+/* Section Divider */
+.section-divider {
+    height: 2px;
+    background-color: #C51D34; /* Raspberry Red */
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* About Us Section */
+.about-section {
+    background-color: #2E2E30; /* Noir Black */
+    color: #F5F5F5; /* White Smoke */
+    padding: 5rem 0;
+}
+
+.about-section h2 {
+    color: #C51D34; /* Raspberry Red */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.about-section .btn {
+    background-color: #C51D34; /* Raspberry Red */
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    color: #F5F5F5; /* White Smoke */
+    transition: background-color 0.3s;
+    border-radius: 0;
+}
+
+.about-section .btn:hover {
+    background-color: #9E172A; /* Darker Raspberry Red */
+}
+
+/* Services Section */
+.services-section {
+    background-color: #2E2E30; /* Noir Black */
+    color: #F5F5F5; /* White Smoke */
+    padding: 5rem 0;
+}
+
+.services-section h2 {
+    color: #C51D34; /* Raspberry Red */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.services-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.service-item {
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item h3 {
+    margin-top: 1rem;
+    color: #C51D34; /* Raspberry Red */
+    font-size: 1.75rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    background-color: #2E2E30; /* Noir Black */
+    color: #F5F5F5; /* White Smoke */
+    padding: 5rem 0;
+}
+
+.portfolio-section h2 {
+    color: #C51D34; /* Raspberry Red */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.portfolio-item {
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-item h4 {
+    margin-top: 1rem;
+    color: #C51D34; /* Raspberry Red */
+    font-size: 1.5rem;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #2E2E30; /* Noir Black */
+    color: #F5F5F5; /* White Smoke */
+    padding: 5rem 0;
+}
+
+.testimonials-section h2 {
+    color: #C51D34; /* Raspberry Red */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonials-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.testimonial-item {
+    background-color: #2E2E30; /* Noir Black */
+    padding: 2rem;
+    border-left: 4px solid #C51D34; /* Raspberry Red */
+    position: relative;
+}
+
+.testimonial-item::before {
+    content: '\201C';
+    font-size: 4rem;
+    color: #C51D34; /* Raspberry Red */
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+
+.testimonial-item p {
+    font-size: 1.25rem;
+    color: #F5F5F5; /* White Smoke */
+    margin-bottom: 1rem;
+}
+
+.testimonial-item h5 {
+    color: #C51D34; /* Raspberry Red */
+    font-size: 1rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: url('images/cta-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #F5F5F5; /* White Smoke */
+    text-align: center;
+    margin-bottom:250px;
+}
+
+.cta-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(46, 46, 48, 0.8); /* Semi-transparent Noir Black */
+}
+
+.cta-section h2 {
+    position: relative;
+    font-size: 2.5rem;
+    color: #F5F5F5; /* White Smoke */
+    margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+    position: relative;
+    font-size: 1.25rem;
+    color: #F5F5F5; /* White Smoke */
+    margin-bottom: 2rem;
+}
+
+.cta-section .btn {
+    position: relative;
+    background-color: #C51D34; /* Raspberry Red */
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.25rem;
+    color: #F5F5F5; /* White Smoke */
+    transition: background-color 0.3s;
+    border-radius: 0;
+}
+
+.cta-section .btn:hover {
+    background-color: #9E172A; /* Darker Raspberry Red */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #2E2E30; /* Noir Black */
+    color: #F5F5F5; /* White Smoke */
+    padding: 2rem 0;
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #F5F5F5; /* White Smoke */
+}
+
+.footer-section .list-inline-item a {
+    color: #F5F5F5;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-section .list-inline-item a:hover {
+    color: #C51D34; /* Raspberry Red */
+    text-decoration: none;
+}
+
+.footer-section .list-inline-item {
+    margin: 0 0.5rem;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #F5F5F5; /* White Smoke */
+    background-color: rgba(46, 46, 48, 0.7); /* Semi-transparent Noir Black */
+    line-height: 46px;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #C51D34; /* Raspberry Red */
+    color: #F5F5F5; /* White Smoke */
+    text-decoration: none;
+}
+
+.scroll-to-top i {
+    font-size: 24px;
+    line-height: 50px;
+}
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2E2E30; /* Noir Black */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #C51D34; /* Raspberry Red */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #9E172A; /* Darker Raspberry Red */
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .about-section h2,
+    .services-section h2,
+    .portfolio-section h2,
+    .testimonials-section h2,
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* AOS Animations */
+[data-aos] {
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+/* Additional Styles for Line Count */
+.navbar-nav .nav-item {
+    margin-left: 1rem;
+}
+
+.service-item img,
+.portfolio-item img {
+    transition: transform 0.3s;
+}
+
+.service-item img:hover,
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.testimonial-item {
+    border-radius: 0;
+}
+
+.section-divider {
+    margin: 3rem auto;
+}
+
+.hero-section h1 span {
+    display: inline-block;
+    position: relative;
+}
+
+.hero-section h1 span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #C51D34; /* Raspberry Red */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hero-section h1 span:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.footer-section .list-inline {
+    margin-bottom: 0;
+}
+
+.footer-section .list-inline-item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.footer-section .list-inline-item:not(:last-child)::after {
+    content: '|';
+    color: #F5F5F5;
+    margin-left: 0.5rem;
+}
+
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
