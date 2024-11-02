@@ -37,7 +37,8 @@ body {
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-item.active .nav-link {
     color: #C51D34 !important; /* Raspberry Red */
 }
 
@@ -65,8 +66,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-    height: 60vh;
-    background: url('images/services-banner.jpg') no-repeat center center fixed;
+    height: 50vh;
+    background: url('images/contact-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     display: flex;
@@ -90,22 +91,8 @@ body {
 }
 
 .hero-section p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #F5F5F5; /* White Smoke */
-}
-
-.hero-section .btn {
-    background-color: #C51D34; /* Raspberry Red */
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1.25rem;
-    color: #F5F5F5; /* White Smoke */
-    transition: background-color 0.3s;
-    border-radius: 0;
-}
-
-.hero-section .btn:hover {
-    background-color: #9E172A; /* Darker Raspberry Red */
 }
 
 /* Section Divider */
@@ -116,89 +103,75 @@ body {
     width: 80%;
 }
 
-/* Service Section */
-.service-section {
+/* Contact Section */
+.contact-section {
     background-color: #2E2E30; /* Noir Black */
     color: #F5F5F5; /* White Smoke */
     padding: 5rem 0;
 }
 
-.service-section h2 {
+.contact-section h2 {
     color: #C51D34; /* Raspberry Red */
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.service-section p.lead {
-    font-size: 1.25rem;
     margin-bottom: 1.5rem;
 }
 
-.service-section p {
-    font-size: 1rem;
+.contact-section p {
+    font-size: 1.1rem;
     line-height: 1.8;
-    margin-bottom: 1rem;
+    color: #F5F5F5; /* White Smoke */
 }
 
-.service-section ul {
-    list-style-type: none !important;
-    padding-left: 0;
-    margin-top: 1rem;
+.contact-info li {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
 
-.service-section ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.service-section ul li::before {
-    content: '\f058';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    left: 0;
+.contact-info i {
     color: #C51D34; /* Raspberry Red */
+    margin-right: 1rem;
 }
 
-.service-detail {
-    margin-bottom: 5rem;
+.contact-info span {
+    color: #F5F5F5; /* White Smoke */
 }
 
-.service-section .btn {
+.form-control {
+    background-color: #444;
+    border: 1px solid #666;
+    color: #F5F5F5;
+    border-radius: 0;
+    padding: 0.75rem 1rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.form-control:focus {
+    background-color: #555;
+    color: #F5F5F5;
+    border-color: #C51D34; /* Raspberry Red */
+    box-shadow: none;
+}
+
+.btn-primary {
     background-color: #C51D34; /* Raspberry Red */
     border: none;
+    border-radius: 0;
     padding: 0.75rem 2rem;
     font-size: 1.25rem;
     color: #F5F5F5; /* White Smoke */
     transition: background-color 0.3s;
-    border-radius: 0;
-    margin: 0.5rem;
 }
 
-.service-section .btn:hover {
+.btn-primary:hover {
     background-color: #9E172A; /* Darker Raspberry Red */
 }
 
-/* Success Metrics */
-.success-metric {
-    background-color: #2E2E30; /* Noir Black */
-    padding: 2rem;
-    border-left: 4px solid #C51D34; /* Raspberry Red */
-    margin-bottom: 2rem;
-}
-
-.success-metric i {
-    color: #C51D34; /* Raspberry Red */
-}
-
-.success-metric h4 {
-    color: #C51D34; /* Raspberry Red */
-    margin-top: 1rem;
-}
-
-.success-metric p {
-    color: #F5F5F5; /* White Smoke */
+.btn-block {
+    width: 100%;
 }
 
 /* Footer Section */
@@ -255,21 +228,11 @@ body {
     line-height: 50px;
 }
 
-/* Custom Scrollbar */
-body::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: #2E2E30; /* Noir Black */
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #C51D34; /* Raspberry Red */
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #9E172A; /* Darker Raspberry Red */
+/* AOS Animations */
+[data-aos] {
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 /* Media Queries */
@@ -300,7 +263,7 @@ body::-webkit-scrollbar-thumb:hover {
         font-size: 1rem;
     }
 
-    .service-section h2 {
+    .contact-section h2 {
         font-size: 2rem;
     }
 }
@@ -320,24 +283,30 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
-/* AOS Animations */
-[data-aos] {
-    transition-property: transform, opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease;
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+    width: 0.5rem;
 }
 
-/* Additional Styles for Line Count */
+body::-webkit-scrollbar-track {
+    background: #2E2E30; /* Noir Black */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #C51D34; /* Raspberry Red */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #9E172A; /* Darker Raspberry Red */
+}
+
+/* Additional Styles */
 .navbar-nav .nav-item {
     margin-left: 1rem;
 }
 
-.btn {
-    border-radius: 0;
-}
-
-.service-section img {
-    border-radius: 0;
+.section-divider {
+    margin: 3rem auto;
 }
 
 .footer-section .list-inline {
@@ -357,8 +326,4 @@ body::-webkit-scrollbar-thumb:hover {
 
 body {
     transition: background-color 0.5s, color 0.5s;
-}
-
-html {
-    scroll-behavior: smooth;
 }
