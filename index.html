@@ -45,8 +45,8 @@
     }
     </script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap CSS (Updated to Bootstrap 5) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -64,15 +64,15 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top " style="max-width: 100vw;">
         <div class="container">
             <a class="navbar-brand" href="index.html">Website Design Anglesey</a>
-            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item active m-2">
                         <a class="nav-link" href="index.html" aria-label="Navigate to Home Page">Home
                             <div class="hover-underline"></div>
@@ -104,9 +104,9 @@
             <div class="container mt-5 h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-lg-7 my-5" data-aos="fade-right" data-aos-duration="1000">
-                        <h1 class="display-4 text-white">Affordable Web Design for Small Businesses in North Wales</h1>
+                        <h1 class="display-4 text-white pt-2">Affordable Web Design for Small Businesses in North Wales</h1>
                         <p class="lead text-white-50">We craft captivating web designs that drive growth and success for small businesses across North Wales. Join us on a digital journey where innovation meets excellence, and clients gain substantial value from your website.</p>
-                        <a href="contact.html" class="btn btn-primary btn-lg mt-4" aria-label="Contact us to design your website today!">Let's Design Your Website Today!</a>
+                        <a href="contact.html" class="btn btn-primary btn-lg mb-4" aria-label="Contact us to design your website today!">Let's Design Your Website Today!</a>
                     </div>
                     <div class="col-lg-5 my-5" data-aos="fade-left" data-aos-duration="1000">
                         <img src="images/hero-illustration.png" class="img-fluid d-none d-lg-block" alt="Illustration of a modern, professional website design">
@@ -121,13 +121,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <h2 class="font-weight-bold">Who We Are</h2>
+                    <h2 class="fw-bold">Who We Are</h2>
                     <p class="lead">At <strong>Website Design Anglesey</strong>, we're passionate about creating digital experiences that captivate and inspire. Our team blends creativity with technology to help small businesses in North Wales stand out online, ensuring each website we build not only looks stunning but also performs exceptionally.</p>
                     <ul class="list-unstyled mt-4">
-                        <li><i class="fas fa-check-circle text-primary mr-2"></i> Innovative Solutions Tailored to Your Business</li>
-                        <li><i class="fas fa-check-circle text-primary mr-2"></i> Personalized Approach for Each Project</li>
-                        <li><i class="fas fa-check-circle text-primary mr-2"></i> Results-Driven Strategies to Boost Your Online Presence</li>
-                        <li><i class="fas fa-check-circle text-primary mr-2"></i> Comprehensive Support from Start to Finish</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Innovative Solutions Tailored to Your Business</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Personalized Approach for Each Project</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Results-Driven Strategies to Boost Your Online Presence</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> Comprehensive Support from Start to Finish</li>
                     </ul>
                     <a href="about.html" class="btn btn-outline-primary btn-lg mt-4" aria-label="Learn more about us">Learn More About Us</a>
                 </div>
@@ -144,7 +144,7 @@
     <section id="services" class="services-section py-5 bg-light">
         <div class="container">
             <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
-                <h2 class="font-weight-bold">Our Expertise</h2>
+                <h2 class="fw-bold">Our Expertise</h2>
                 <p class="lead">Offering a comprehensive suite of services to elevate your brand and drive business growth.</p>
             </div>
             <div class="row mt-5">
@@ -156,7 +156,7 @@
                         </div>
                         <h4>Custom Web Design North Wales</h4>
                         <p>Creating bespoke designs that reflect your brand's identity and engage your audience effectively. Our custom web design services are tailored to meet the unique needs of small businesses in North Wales, ensuring a strong online presence.</p>
-                        <a href="services.html#custom-web-design" class="btn btn-primary mt-3" aria-label="Learn more about Custom Web Design">Learn More</a>
+                        <a href="services.html#custom-web-design" class="btn btn-primary mt-3" aria-label="Learn more about Custom Web Design">Bespoke experience</a>
                     </div>
                 </div>
                 <!-- Service Item 2 -->
@@ -167,7 +167,7 @@
                         </div>
                         <h4>SEO Optimization North Wales</h4>
                         <p>Enhancing your online visibility to attract more customers and drive growth. Our SEO services are designed to improve your website's ranking on search engines, making it easier for potential clients in North Wales to find you.</p>
-                        <a href="services.html#seo-optimization" class="btn btn-success mt-3" aria-label="Learn more about SEO Optimization">Learn More</a>
+                        <a href="services.html#seo-optimization" class="btn btn-success mt-3" aria-label="Learn more about SEO Optimization">Reach your customers today</a>
                     </div>
                 </div>
                 <!-- Service Item 3 -->
@@ -178,7 +178,7 @@
                         </div>
                         <h4>Responsive Web Design</h4>
                         <p>Ensuring seamless user experiences across all devices and screen sizes. Our responsive design services guarantee that your website looks and functions perfectly on desktops, tablets, and smartphones.</p>
-                        <a href="services.html#responsive-web-design" class="btn btn-danger mt-3" aria-label="Learn more about Responsive Web Design">Learn More</a>
+                        <a href="services.html#responsive-web-design" class="btn btn-danger mt-3" aria-label="Learn more about Responsive Web Design"> Device Layout Perfection</a>
                     </div>
                 </div>
                 <!-- Service Item 4 -->
@@ -189,7 +189,7 @@
                         </div>
                         <h4>E-Commerce Solutions North Wales</h4>
                         <p>Building robust online stores to expand your business and increase revenue. Our e-commerce solutions are tailored to meet the specific needs of small businesses in North Wales, providing secure and scalable platforms for your products or services.</p>
-                        <a href="services.html#e-commerce-solutions" class="btn btn-warning mt-3" aria-label="Learn more about E-Commerce Solutions">Learn More</a>
+                        <a href="services.html#e-commerce-solutions" class="btn btn-warning mt-3" aria-label="Learn more about E-Commerce Solutions">Begin Selling Now</a>
                     </div>
                 </div>
                 <!-- Service Item 5 -->
@@ -200,7 +200,7 @@
                         </div>
                         <h4>Branding & Identity</h4>
                         <p>Crafting a strong brand identity that resonates with your target audience. Our branding services help small businesses in North Wales establish a memorable and cohesive brand presence across all digital platforms.</p>
-                        <a href="services.html#branding-identity" class="btn btn-info mt-3" aria-label="Learn more about Branding & Identity">Learn More</a>
+                        <a href="services.html#branding-identity" class="btn btn-info mt-3" aria-label="Learn more about Branding & Identity">Discover your Brand </a>
                     </div>
                 </div>
                 <!-- Service Item 6 -->
@@ -211,7 +211,7 @@
                         </div>
                         <h4>Ongoing Support</h4>
                         <p>Providing continuous support to keep your website running smoothly. Our ongoing support services ensure that your website remains up-to-date, secure, and optimised for peak performance.</p>
-                        <a href="services.html#ongoing-support" class="btn btn-secondary mt-3" aria-label="Learn more about Ongoing Support">Learn More</a>
+                        <a href="services.html#ongoing-support" class="btn btn-secondary mt-3" aria-label="Learn more about Ongoing Support">Discuss Ongoing Support </a>
                     </div>
                 </div>
             </div>
@@ -224,31 +224,31 @@
         <section id="areas-covered" class="areas-covered-section py-5">
             <div class="container">
                 <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
-                    <h2 class="font-weight-bold">Areas We Cover in North Wales</h2>
+                    <h2 class="fw-bold">Areas We Cover in North Wales</h2>
                     <p class="lead">Proudly serving small businesses across the following towns and cities in North Wales:</p>
                 </div>
                 <div class="row mt-4">
                     <div class="col-12">
                         <ul class="list-inline text-center">
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Bangor</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Holyhead</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Llandudno</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Conwy</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Colwyn Bay</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Caernarfon</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Wrexham</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Mold</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Rhyl</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Pwllheli</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Abergele</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Amlwch</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Blaenau Ffestiniog</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Betws-y-Coed</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Denbigh</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Holywell</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Prestatyn</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Porthmadog</a></li>
-                            <li class="list-inline-item"><a href="#" class="badge badge-primary m-1">Ruthin</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Bangor</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Holyhead</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Llandudno</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Conwy</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Colwyn Bay</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Caernarfon</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Wrexham</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Mold</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Rhyl</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Pwllheli</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Abergele</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Amlwch</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Blaenau Ffestiniog</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Betws-y-Coed</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Denbigh</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Holywell</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Prestatyn</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Porthmadog</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary m-1">Ruthin</a></li>
                         </ul>
                     </div>
                 </div>
@@ -259,7 +259,7 @@
     <section id="portfolio" class="portfolio-section py-5">
         <div class="container">
             <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
-                <h2 class="font-weight-bold">Our Portfolio</h2>
+                <h2 class="fw-bold">Our Portfolio</h2>
                 <p class="lead">A showcase of our recent projects highlighting our commitment to excellence and innovation.</p>
             </div>
             <div class="row mt-5 grid">
@@ -331,7 +331,7 @@
                 </div>
             </div>
             <div class="text-center mt-4" data-aos="fade-up" data-aos-duration="1000">
-                <a href="portfolio.html" class="btn btn-primary btn-lg" aria-label="View our full portfolio">View Full Portfolio</a>
+                <a href="https://drive.google.com/file/d/10NS2zKtup5XKTQrz_zo50ldts91RbdVv/view?usp=sharing" target="_blank" class="btn btn-primary btn-lg" aria-label="View our full portfolio">View Full Portfolio</a>
             </div>
         </section>
 
@@ -339,49 +339,51 @@
     <section id="testimonials" class="testimonials-section py-5">
         <div class="container">
             <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
-                <h2 class="font-weight-bold">What Our Clients Say</h2>
+                <h2 class="fw-bold">What Our Clients Say</h2>
                 <p class="lead">Hear from businesses in North Wales who have transformed their online presence with our services.</p>
             </div>
-            <div id="testimonialCarousel" class="carousel slide mt-5" data-ride="carousel" data-aos="fade-up" data-aos-duration="1000">
+            <div id="testimonialCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+                <!-- Carousel Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-label="Go to first testimonial"></li>
+                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Go to second testimonial"></li>
+                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Go to third testimonial"></li>
+                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Go to fourth testimonial"></li>
+                </ol>
+
                 <div class="carousel-inner">
                     <!-- Testimonial Item 1 -->
                     <div class="carousel-item active">
                         <div class="testimonial-item text-center">
                             <p class="lead">"Website Design Anglesey exceeded our expectations in every way. Their attention to detail and commitment to excellence is unmatched."</p>
-                            <h5>- Jack Morgan, Coastal Retailer, Holyhead</h5>
+                            <h5>- Jack</h5>
                         </div>
                     </div>
                     <!-- Testimonial Item 2 -->
                     <div class="carousel-item">
                         <div class="testimonial-item text-center">
                             <p class="lead">"Their team transformed our website into a powerful tool that has significantly increased our customer engagement and sales."</p>
-                            <h5>- Sara Evans, Tech Innovators, Bangor</h5>
+                            <h5>- Sara</h5>
                         </div>
                     </div>
                     <!-- Testimonial Item 3 -->
                     <div class="carousel-item">
                         <div class="testimonial-item text-center">
                             <p class="lead">"The SEO services provided by Website Design Anglesey have propelled us to the top of search engine rankings. Our online inquiries have doubled."</p>
-                            <h5>- Erin Thomas, Local Services, Conwy</h5>
+                            <h5>- Erin</h5>
                         </div>
                     </div>
                     <!-- Testimonial Item 4 -->
                     <div class="carousel-item">
                         <div class="testimonial-item text-center">
                             <p class="lead">"Their ongoing support and dedication make them an invaluable partner. They are quick to respond and deliver high-quality work."</p>
-                            <h5>- Sian Davies, Hospitality, Beaumaris</h5>
+                            <h5>- Sian</h5>
                         </div>
                     </div>
                 </div>
+
                 <!-- Carousel Controls -->
-                <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev" aria-label="Previous Testimonial">
-                    <i class="fas fa-arrow-left fa-2x text-primary"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next" aria-label="Next Testimonial">
-                    <i class="fas fa-arrow-right fa-2x text-primary"></i>
-                    <span class="sr-only">Next</span>
-                </a>
+             
             </div>
         </div>
     </section>
@@ -393,8 +395,8 @@
             Your browser does not support the video tag.
         </video>
         <div class="overlay-dark position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
-            <div class="container text-center text-white" data-aos="zoom-in" data-aos-duration="1000">
-                <h2 class="font-weight-bold">Ready to Elevate Your Business?</h2>
+            <div class="container text-center text-black" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="fw-bold">Ready to Elevate Your Business?</h2>
                 <p class="lead">Contact us today and let's start creating something extraordinary together.</p>
                 <a href="contact.html" class="btn btn-primary btn-lg mt-4" aria-label="Get Started Now">Get Started Now</a>
             </div>
@@ -435,14 +437,12 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <a class="scroll-to-top rounded" href="#home" aria-label="Scroll to Top">
+    <a class="scroll-to-top rounded d-none d-md-block" href="#home" aria-label="Scroll to Top">
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Bootstrap JS and Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+Pw5yxaZBQ4oQZKAKunLV1oP9E9o3Y3StUBJZfN3f7z90J7V1s11DkWQb" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3U3CqXMQmjtcD4/Vk50q/EdQuK3uXgaI6YB6N" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B0UglyR+LyXU1kw3kqL8Kc+R1NKV/Tr5gJQfC/0qZl7xg/mqmSiu3LfdPbg9P0Yp" crossorigin="anonymous"></script>
+    <!-- jQuery (Retained for Custom Scripts) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- AOS Animation JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -452,6 +452,9 @@
 
     <!-- Isotope JS for Portfolio Filtering -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <!-- Bootstrap JS (Updated to Bootstrap 5) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
     <script>
