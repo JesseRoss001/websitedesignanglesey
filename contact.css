@@ -18,7 +18,7 @@ body {
 /* Navigation Bar */
 .navbar {
     background-color: #ffffff; /* White background */
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     transition: background-color 0.3s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -68,7 +68,7 @@ body {
 /* Hero Section */
 .hero-section {
     height: 50vh;
-    background: url('images/communication.jpg') no-repeat center center fixed;
+    background: url('../images/communication.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     display: flex;
@@ -133,6 +133,7 @@ body {
 /* Contact Section */
 .contact-section {
     padding: 5rem 0;
+    background-color: #ffffff; /* White background */
 }
 
 .contact-section h2 {
@@ -141,7 +142,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.contact-section p {
+.contact-section p.lead {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #333; /* Dark text */
@@ -158,8 +159,14 @@ body {
     margin-right: 1rem;
 }
 
-.contact-info span {
+.contact-info span a {
     color: #333; /* Dark text */
+    text-decoration: none;
+}
+
+.contact-info span a:hover,
+.contact-info span a:focus {
+    text-decoration: underline;
 }
 
 .form-control {
@@ -168,6 +175,7 @@ body {
     color: #333;
     border-radius: 0;
     padding: 0.75rem 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-control::placeholder {
@@ -178,7 +186,7 @@ body {
     background-color: #fff;
     color: #333;
     border-color: #C51D34; /* Raspberry Red */
-    box-shadow: none;
+    box-shadow: 0 0 0 0.2rem rgba(197, 29, 52, 0.25);
 }
 
 .btn-primary {
@@ -199,21 +207,36 @@ body {
     width: 100%;
 }
 
+.alert {
+    display: none;
+}
+
+#formFeedback .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#formFeedback .alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
 /* Footer Section */
 .footer-section {
-    background-color: #F5F5F5; /* Light background */
-    color: #333; /* Dark text */
+    background-color: #333; /* Dark background */
+    color: #ffffff; /* White text */
     padding: 2rem 0;
 }
 
 .footer-section p {
     margin: 0;
     font-size: 0.9rem;
-    color: #333; /* Dark text */
 }
 
 .footer-section a {
-    color: #333;
+    color: #ffffff;
     transition: color 0.3s;
 }
 
