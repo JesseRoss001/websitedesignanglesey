@@ -11,15 +11,16 @@ html {
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #2E2E30; /* Noir Black */
-    color: #F5F5F5; /* White Smoke */
+    background-color: #F5F5F5; /* Light background */
+    color: #333; /* Dark text */
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: rgba(46, 46, 48, 0.9); /* Noir Black with transparency */
+    background-color: #ffffff; /* White background */
     padding: 0.5rem 1rem;
     transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand {
@@ -29,7 +30,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #F5F5F5 !important; /* White Smoke */
+    color: #333 !important; /* Dark text */
     font-size: 1.1rem;
     position: relative;
     padding: 0.5rem 1rem;
@@ -48,7 +49,7 @@ body {
 
 .custom-toggler .navbar-toggler-icon {
     font-size: 1.5rem;
-    color: #F5F5F5;
+    color: #333;
 }
 
 .hover-underline {
@@ -66,13 +67,14 @@ body {
 
 /* Hero Section */
 .hero-section {
-    height: 50vh;
+    height: 60vh;
     background: url('images/about-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
+    perspective: 1000px;
 }
 
 .hero-section .overlay {
@@ -81,18 +83,43 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(46, 46, 48, 0.7); /* Semi-transparent Noir Black */
+    background: rgba(245, 245, 245, 0.7); /* Semi-transparent light background */
+   
 }
 
 .hero-section h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-section p {
     font-size: 1.5rem;
-    color: #F5F5F5; /* White Smoke */
+    color: #555; /* Medium dark text */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Section Divider */
@@ -117,25 +144,51 @@ body {
 .content-section p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
 }
 
 .profile-pic {
     width: 100%;
     height: auto;
-    border-radius: 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+}
+
+.profile-pic:hover {
+    transform: rotateY(360deg);
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Skills Section */
 .skills-section {
-    background-color: #2E2E30; /* Noir Black */
+    
     padding: 5rem 0;
 }
 
 .skill-item {
     text-align: center;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
     padding: 1rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
 }
 
 .skill-item i {
@@ -144,7 +197,7 @@ body {
 
 .skill-item h5 {
     margin-top: 1rem;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
 }
 
 /* Timeline Section */
@@ -204,9 +257,11 @@ body {
 }
 
 .timeline-item .content {
-    background: #444;
+    background: rgba(255, 255, 255, 0.9);
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 10px;
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .timeline-item h5 {
@@ -216,7 +271,7 @@ body {
 }
 
 .timeline-item p {
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
 }
 
 @media (max-width: 767px) {
@@ -243,14 +298,25 @@ body {
 
 /* Interests Section */
 .interests-section {
-    background-color: #2E2E30; /* Noir Black */
+    
     padding: 5rem 0;
 }
 
 .interest-item {
     text-align: center;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
     padding: 1rem;
+}
+
+.interest-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
 }
 
 .interest-item i {
@@ -259,7 +325,7 @@ body {
 
 .interest-item h5 {
     margin-top: 1rem;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
 }
 
 /* Certifications Section */
@@ -273,10 +339,11 @@ body {
 }
 
 .certifications-section .list-group-item {
-    background-color: #444;
-    color: #F5F5F5;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 0.5rem;
+    border-radius: 10px;
 }
 
 /* Languages Section */
@@ -290,10 +357,11 @@ body {
 }
 
 .languages-section .list-group-item {
-    background-color: #444;
-    color: #F5F5F5;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 0.5rem;
+    border-radius: 10px;
 }
 
 /* Call to Action Section */
@@ -301,10 +369,11 @@ body {
     background: url('images/cta-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
     text-align: center;
     padding: 5rem 0;
-margin-bottom: 250px;
+    margin-bottom: 250px;
+    perspective: 1000px;
 }
 
 .cta-section .overlay {
@@ -313,20 +382,22 @@ margin-bottom: 250px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(46, 46, 48, 0.8); /* Semi-transparent Noir Black */
+    background: rgba(245, 245, 245, 0.8); /* Semi-transparent light background */
+    backdrop-filter: blur(5px);
 }
 
 .cta-section h2 {
     position: relative;
     font-size: 2.5rem;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
     margin-bottom: 1.5rem;
+    animation: zoomIn 1s ease-in-out;
 }
 
 .cta-section p {
     position: relative;
     font-size: 1.25rem;
-    color: #F5F5F5; /* White Smoke */
+    color: #555; /* Medium dark text */
     margin-bottom: 2rem;
 }
 
@@ -336,30 +407,42 @@ margin-bottom: 250px;
     border: none;
     padding: 0.75rem 2rem;
     font-size: 1.25rem;
-    color: #F5F5F5; /* White Smoke */
-    transition: background-color 0.3s;
+    color: #fff; /* White text */
+    transition: background-color 0.3s, transform 0.3s;
     border-radius: 0;
 }
 
 .cta-section .btn:hover {
     background-color: #9E172A; /* Darker Raspberry Red */
+    transform: scale(1.05);
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Footer Section */
 .footer-section {
-    background-color: #2E2E30; /* Noir Black */
-    color: #F5F5F5; /* White Smoke */
+    background-color: #F5F5F5; /* Light background */
+    color: #333; /* Dark text */
     padding: 2rem 0;
 }
 
 .footer-section p {
     margin: 0;
     font-size: 0.9rem;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
 }
 
 .footer-section a {
-    color: #F5F5F5;
+    color: #333;
     transition: color 0.3s;
 }
 
@@ -376,16 +459,17 @@ margin-bottom: 250px;
     width: 50px;
     height: 50px;
     text-align: center;
-    color: #F5F5F5; /* White Smoke */
-    background-color: rgba(46, 46, 48, 0.7); /* Semi-transparent Noir Black */
+    color: #fff; /* White text */
+    background-color: rgba(197, 29, 52, 0.7); /* Semi-transparent Raspberry Red */
     line-height: 46px;
     z-index: 9999;
     transition: background-color 0.3s;
+    border-radius: 50%;
 }
 
 .scroll-to-top:hover {
     background-color: #C51D34; /* Raspberry Red */
-    color: #F5F5F5; /* White Smoke */
+    color: #fff; /* White text */
     text-decoration: none;
 }
 
@@ -459,7 +543,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #2E2E30; /* Noir Black */
+    background: #F5F5F5; /* Light background */
 }
 
 body::-webkit-scrollbar-thumb {

@@ -10,16 +10,17 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #2E2E30; /* Noir Black */
-    color: #F5F5F5; /* White Smoke */
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5; /* Light background */
+    color: #333; /* Dark text */
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: rgba(46, 46, 48, 0.9); /* Noir Black with transparency */
+    background-color: #ffffff; /* White background */
     padding: 0.5rem 1rem;
     transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand {
@@ -29,7 +30,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #F5F5F5 !important; /* White Smoke */
+    color: #333 !important; /* Dark text */
     font-size: 1.1rem;
     position: relative;
     padding: 0.5rem 1rem;
@@ -37,7 +38,8 @@ body {
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-item.active .nav-link {
     color: #C51D34 !important; /* Raspberry Red */
 }
 
@@ -47,7 +49,7 @@ body {
 
 .custom-toggler .navbar-toggler-icon {
     font-size: 1.5rem;
-    color: #F5F5F5;
+    color: #333;
 }
 
 .hover-underline {
@@ -66,12 +68,13 @@ body {
 /* Hero Section */
 .hero-section {
     height: 60vh;
-    background: url('images/services-banner.jpg') no-repeat center center fixed;
+    background: url('images/services-hero.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     display: flex;
     align-items: center;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
+    perspective: 1000px;
 }
 
 .hero-section .overlay {
@@ -80,32 +83,43 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(46, 46, 48, 0.7); /* Semi-transparent Noir Black */
+    background: rgba(245, 245, 245, 0.7); /* Semi-transparent light background */
+    backdrop-filter: blur(5px);
 }
 
 .hero-section h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-section p {
-    font-size: 1.25rem;
-    color: #F5F5F5; /* White Smoke */
+    font-size: 1.5rem;
+    color: #555; /* Medium dark text */
+    animation: fadeInUp 1s ease-in-out;
 }
 
-.hero-section .btn {
-    background-color: #C51D34; /* Raspberry Red */
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1.25rem;
-    color: #F5F5F5; /* White Smoke */
-    transition: background-color 0.3s;
-    border-radius: 0;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.hero-section .btn:hover {
-    background-color: #9E172A; /* Darker Raspberry Red */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Section Divider */
@@ -116,117 +130,101 @@ body {
     width: 80%;
 }
 
-/* Service Section */
-.service-section {
-    background-color: #2E2E30; /* Noir Black */
-    color: #F5F5F5; /* White Smoke */
+/* Services Section */
+.services-section {
     padding: 5rem 0;
 }
 
-.service-section h2 {
-    color: #C51D34; /* Raspberry Red */
-    font-size: 2.5rem;
+.service-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
-.service-section p.lead {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
+.service-header h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
-.service-section p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
+.service-item p {
+    color: #555;
+    line-height: 1.6;
 }
 
-.service-section ul {
-    list-style-type: none !important;
-    padding-left: 0;
+.service-item ul {
+    list-style: none;
+    padding: 0;
     margin-top: 1rem;
 }
 
-.service-section ul li {
-    position: relative;
-    padding-left: 1.5rem;
+.service-item ul li {
+    display: flex;
+    align-items: center;
     margin-bottom: 0.5rem;
 }
 
-.service-section ul li::before {
-    content: '\f058';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    color: #C51D34; /* Raspberry Red */
+.service-item ul li i {
+    margin-right: 0.5rem;
 }
 
-.service-detail {
-    margin-bottom: 5rem;
-}
-
-.service-section .btn {
-    background-color: #C51D34; /* Raspberry Red */
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1.25rem;
-    color: #F5F5F5; /* White Smoke */
-    transition: background-color 0.3s;
-    border-radius: 0;
+/* Call to Action */
+.services-section .btn {
     margin: 0.5rem;
 }
 
-.service-section .btn:hover {
-    background-color: #9E172A; /* Darker Raspberry Red */
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #F9F9F9;
 }
 
-/* Success Metrics */
-.success-metric {
-    background-color: #2E2E30; /* Noir Black */
-    padding: 2rem;
-    border-left: 4px solid #C51D34; /* Raspberry Red */
-    margin-bottom: 2rem;
-}
-
-.success-metric i {
+.testimonials-section h2 {
     color: #C51D34; /* Raspberry Red */
 }
 
-.success-metric h4 {
-    color: #C51D34; /* Raspberry Red */
+.testimonial-item p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-item h5 {
     margin-top: 1rem;
-}
-
-.success-metric p {
-    color: #F5F5F5; /* White Smoke */
+    color: #333;
 }
 
 /* Footer Section */
 .footer-section {
-    background-color: #2E2E30; /* Noir Black */
-    color: #F5F5F5; /* White Smoke */
+    background-color: #F5F5F5; /* Light background */
+    color: #333; /* Dark text */
     padding: 2rem 0;
 }
 
 .footer-section p {
     margin: 0;
     font-size: 0.9rem;
-    color: #F5F5F5; /* White Smoke */
+    color: #333; /* Dark text */
 }
 
-.footer-section .list-inline-item a {
-    color: #F5F5F5;
-    font-size: 0.9rem;
+.footer-section a {
+    color: #333;
     transition: color 0.3s;
 }
 
-.footer-section .list-inline-item a:hover {
+.footer-section a:hover {
     color: #C51D34; /* Raspberry Red */
     text-decoration: none;
-}
-
-.footer-section .list-inline-item {
-    margin: 0 0.5rem;
 }
 
 /* Scroll to Top Button */
@@ -237,16 +235,17 @@ body {
     width: 50px;
     height: 50px;
     text-align: center;
-    color: #F5F5F5; /* White Smoke */
-    background-color: rgba(46, 46, 48, 0.7); /* Semi-transparent Noir Black */
+    color: #fff; /* White text */
+    background-color: rgba(197, 29, 52, 0.7); /* Semi-transparent Raspberry Red */
     line-height: 46px;
     z-index: 9999;
     transition: background-color 0.3s;
+    border-radius: 50%;
 }
 
 .scroll-to-top:hover {
     background-color: #C51D34; /* Raspberry Red */
-    color: #F5F5F5; /* White Smoke */
+    color: #fff; /* White text */
     text-decoration: none;
 }
 
@@ -255,21 +254,11 @@ body {
     line-height: 50px;
 }
 
-/* Custom Scrollbar */
-body::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: #2E2E30; /* Noir Black */
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #C51D34; /* Raspberry Red */
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #9E172A; /* Darker Raspberry Red */
+/* AOS Animations */
+[data-aos] {
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 /* Media Queries */
@@ -300,8 +289,8 @@ body::-webkit-scrollbar-thumb:hover {
         font-size: 1rem;
     }
 
-    .service-section h2 {
-        font-size: 2rem;
+    .service-item {
+        padding: 1.5rem;
     }
 }
 
@@ -320,45 +309,19 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
-/* AOS Animations */
-[data-aos] {
-    transition-property: transform, opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease;
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+    width: 0.5rem;
 }
 
-/* Additional Styles for Line Count */
-.navbar-nav .nav-item {
-    margin-left: 1rem;
+body::-webkit-scrollbar-track {
+    background: #F5F5F5; /* Light background */
 }
 
-.btn {
-    border-radius: 0;
+body::-webkit-scrollbar-thumb {
+    background: #C51D34; /* Raspberry Red */
 }
 
-.service-section img {
-    border-radius: 0;
-}
-
-.footer-section .list-inline {
-    margin-bottom: 0;
-}
-
-.footer-section .list-inline-item {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-}
-
-.footer-section .list-inline-item:not(:last-child)::after {
-    content: '|';
-    color: #F5F5F5;
-    margin-left: 0.5rem;
-}
-
-body {
-    transition: background-color 0.5s, color 0.5s;
-}
-
-html {
-    scroll-behavior: smooth;
+body::-webkit-scrollbar-thumb:hover {
+    background: #9E172A; /* Darker Raspberry Red */
 }
