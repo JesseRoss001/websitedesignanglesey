@@ -5,6 +5,7 @@ Disallow: /wp-includes/
 Disallow: /privacy.html
 Disallow: /terms.html
 Disallow: /*dark-mode*
+Disallow: /index.html
 Allow: /
 
 Sitemap: https://websitedesignanglesey.com/sitemap.xml
