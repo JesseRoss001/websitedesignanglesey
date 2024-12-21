@@ -16,7 +16,7 @@
     <meta property="og:image" content="images/contact-banner.jpg">
     <meta property="og:url" content="https://www.websitedesignanglesey.com/contact.html">
     <meta property="og:type" content="website">
-<link rel="icon" href="https://res.cloudinary.com/dsedezvzs/image/upload/v1730895326/Website_Design_Anglesey_pz6ugr.png" type="image/png">
+    <link rel="icon" href="https://res.cloudinary.com/dsedezvzs/image/upload/v1730895326/Website_Design_Anglesey_pz6ugr.png" type="image/png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -44,15 +44,19 @@
 
     <!-- AOS Animation CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0006YLL6QM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0006YLL6QM');
-</script>
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0006YLL6QM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0006YLL6QM');
+    </script>
 </head>
 <body>
 
@@ -111,7 +115,6 @@
     </div>
 </header>
 
-
     <!-- Section Divider -->
     <div class="section-divider"></div>
 
@@ -140,20 +143,17 @@
                     <!-- Google Map Embed -->
                     <div class="mt-4">
                         <!-- Replace the src attribute with your actual Google Maps embed link -->
-                  <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDg_tT-RCv3X9SwBQhZS3WlbsD6d1N9HyY&q=4+Ffordd+Cerrig+Mawr,Anglesey,North+Wales,LL65+3LU" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDg_tT-RCv3X9SwBQhZS3WlbsD6d1N9HyY&q=4+Ffordd+Cerrig+Mawr,Anglesey,North+Wales,LL65+3LU" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
                 <!-- Contact Form -->
                 <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
                     <h2 class="font-weight-bold my-2">Send Us a Message</h2>
                     <p class="lead">Fill out the form below, and we'll get back to you as soon as possible.</p>
-                    <form action="https://api.web3forms.com/submit" method="POST" class="mt-4">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="mt-4" id="contact-form">
                         <!-- Web3Forms Hidden Fields -->
-                        <input type="hidden" name="access_key" value="6058b768-9186-4d8d-8fa5-ced446829fca">
-                        <!-- Replace "YOUR_ACCESS_KEY_HERE" with your actual Web3Forms access key -->
-                        <input type="hidden" name="redirect" value="https://www.websitedesignanglesey.com/thank-you.html">
+                        <input type="hidden" name="access_key" value="64b77c31-f500-4317-87f1-feb766e00ea7">
+                        <!-- Remove the redirect field to prevent redirection -->
                         <div class="form-group">
                             <label for="name">Name<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
@@ -228,6 +228,9 @@
     <!-- AOS Animation JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Custom JS -->
     <script>
         // Initialize AOS
@@ -245,6 +248,67 @@
             $('.scroll-to-top').click(function(){
                 $("html, body").animate({ scrollTop: 0 }, 600);
                 return false;
+            });
+
+            // Handle form submission
+            $('#contact-form').submit(function(e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                // Serialize form data into a JavaScript object
+                var formData = {
+                    access_key: $('input[name="access_key"]').val(),
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    message: $('#message').val(),
+                    botcheck: $('#botcheck').is(':checked') ? 'on' : ''
+                };
+
+                // Submit the form via AJAX using Fetch API
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        Swal.fire(
+                            'Success!',
+                            'Your message has been sent successfully!',
+                            'success'
+                        );
+                        // Reset the form
+                        $('#contact-form')[0].reset();
+                    } else {
+                        Swal.fire(
+                            'Oops!',
+                            data.message || 'Something went wrong. Please try again later.',
+                            'error'
+                        );
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    Swal.fire(
+                        'Error!',
+                        'There was an error submitting the form. Please try again later.',
+                        'error'
+                    );
+                });
+
+                // Show loading alert
+                Swal.fire({
+                    title: 'Sending...',
+                    text: 'Please wait while we send your message.',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading()
+                    }
+                });
             });
         });
     </script>
